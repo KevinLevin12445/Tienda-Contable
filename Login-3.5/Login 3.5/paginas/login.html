@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final bit</title>
+
+    <link rel="stylesheet" href="../styles/styleLogin.css"> <!--enlaza es css--->
+    <script src="../sources/login.js"></script> <!--enlaza el codigo javascript--->
+</head>
+
+
+<body>
+    
+    <style>
+        body {
+           background-color: #ffffff; /*coloca de fondo un color gris claro*/
+        }
+     </style>
+
+<div class="container">
+  <div class="image">
+    <img src="../assets/LOGO_MULTISERVICE_CONSULTING.png" alt="Logo">
+  </div>
+  <div class="form-container">
+    <h2>Login</h2>
+    <form action="">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit" onclick="iniciarSesion()" class="submit">Inicia Sesion</button> <!--Botón para enviar el formulario-->
+      <p class="login-link">¿No tienes una cuenta? <a href="../paginas/login.html">registrate</a></p> <!--Texto adicional para el enlace de inicio de sesión-->    
+    </form>
+  </div>
+</div>
+</div>

@@ -1,0 +1,213 @@
+*{ /*Establece los valores de margen, relleno, borde, tamaño de fuente y alineación vertical de todos los elementos HTML en cero o al valor por defecto.*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body { /*Alinea el texto del cuerpo de la página al centro.*/
+    text-align: center;
+}
+
+.head { /*Establece las propiedades para el encabezado de la página, incluyendo su posición fija en la parte superior de la página, su altura, color de fondo y un diseño flexbox con los elementos internos centrados y separados entre sí.*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #E7E7E7;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    
+}
+
+/* Estilos para la barra de navegación */
+/* Estilos para la barra de navegación */
+ /* Estilos para la barra de navegación */
+ .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E7E7E7;
+    color: white;
+    width: 150%; /* Agrega esta propiedad */
+  }
+  /* Estilos para el logo */
+  .navbar img {
+    height: 50px;
+    width: 100px;
+  }
+  /* Estilos para los elementos de la derecha */
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  .navbar a { /*Establece el estilo para los enlaces dentro de la barra de navegación, incluyendo un formato de bloque, un relleno de 20 píxeles en la parte superior e inferior y un tamaño de fuente y color de texto determinados.*/
+    display: block;
+    padding: 20px 20px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    background: #E7E7E7; /* Agrega un fondo a los enlaces */
+  }
+
+  .navbar a:hover {
+    background: #cac9c9;
+    color: rgb(0, 0, 0); /* Cambia el color de texto al pasar el mouse por encima */
+    padding: 20px 20px;
+  }
+  /* Estilos para el cuerpo */
+.header { /*Define el estilo para el encabezado principal de la página, que incluye un diseño flexbox y una imagen de fondo escalada para ajustarse al tamaño del contenedor.*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2550px;
+    height: 537px;
+    height: 60vh !important;
+    background: url(../assets/header.jpg) no-repeat center;
+    background-size: cover;
+    
+
+}
+
+.title { /*Establece el estilo para el título en el encabezado principal, incluyendo el tamaño de fuente, peso de fuente, color del texto y transformación de texto en mayúsculas.*/
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+p {  /*Establece el estilo para los párrafos en el encabezado principal, incluyendo el tamaño de fuente, color del texto, margen inferior y relleno a la iz*/
+    margin-bottom: 40px;
+    font-size: 35px;
+    color: #000000;
+    padding: 0 100px;
+}
+
+/* Estilos para los botones */
+
+
+/* Establecer los estilos del botón de inicio */
+.btn-home {
+    display: flex;
+}
+
+/* Establecer los estilos de los enlaces en el botón de inicio */
+.btn-home a {
+    margin: 0 10px;
+}
+
+/* Establecer los estilos del contenido */
+.content {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background: #dddddd;
+    /*sirve para rellenar el contenido con la imagen */
+    
+}
+
+.price {
+   background-color:#dddddd ;
+}
+
+
+.contact {
+    padding-top: 20px;
+    background: #dddddd;
+    padding-bottom: 0;
+    /*le da el color azul marino y lo centra para q no haya bordes blancos*/
+  
+}
+
+@media (max-width: 768px) {
+    /*esta clase establece algunos estilos para un elemento con la clase sau.*/
+    .sau {
+        height: 100vh;/*esta regla establece que la altura del elemento con la clase sau se establece en el 100% de la altura de la pantalla.*/
+    }
+    /*esta clase establece algunos estilos para una barra de navegación.*/
+    .navbar {
+        display: none;  /*esta regla establece que la barra de navegación se oculta y no se muestra en pantallas con un ancho menor o igual a 768 píxeles.*/
+    }
+   
+    } 
+
+
+    .image-container {
+        display: flex;
+        flex-direction: row;
+      }
+      
+      .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0,5px;
+      }
+      
+      img {
+        width: 450px;
+        height: 250px;
+      }
+      
+      a {
+        margin-top: 10px;
+      }
+
+      
+      .contenedor-imagenes {
+        display: flex; /* Alinea los elementos horizontalmente */
+        justify-content: center; /* Centra los elementos horizontalmente */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan en una segunda fila */
+      }
+      
+      .contenedor-imagenes img {
+        margin: 40px 40px 40px;
+        max-width: 70%;
+        height: 70%;
+      }
+      .contenedor-imagenes button {
+        display: block; /* Mostrar el botón como un elemento de bloque */
+        margin: 0 auto 0; /* Centrar horizontalmente y ajustar el margen superior para subir el botón */
+        background-color: #000000; /* Establecer el color de fondo del botón */
+        color: white; /* Establecer el color del texto del botón */
+        padding: 20px 40px; /* Agregar relleno al botón */
+        border: none; /* Eliminar el borde del botón */
+        border-radius: 10px; /* Agregar bordes redondeados al botón */
+        font-size: 16px; /* Establecer el tamaño de fuente del botón */
+      }
+
+      .contenedor-imagenes button:hover {
+        background-color: #555555;
+      }
+
+      .register-link a {
+        color: #000000;
+        text-decoration: none;
+        padding: 5px;
+        margin: 5px;
+        }
+        
+        /* Estilo para el enlace "¿Tienes una cuenta? Inicia sesión" cuando se desplaza sobre él */
+        .register-link a:hover {
+        text-decoration: none;
+        color: #383838;
+        }
+      
+      
+      
+      
+
+      
+      
+      
+      

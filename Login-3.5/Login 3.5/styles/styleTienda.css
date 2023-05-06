@@ -1,0 +1,326 @@
+/* ======= COLORES ======= */
+
+:root{
+    --blue: #02356e;
+    --white: #fff;
+    --azul: #0751a6;
+    --rojo: #e71247;
+    --black:#00000083;
+}
+
+html{ /*tamaño de las cajas de los paquetes*/
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{ /*le da el color de la caja y el color del texto*/
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--blue);
+    background-color: var(--white);
+}
+
+h2,
+h3,
+h4{ /*indica el tamaño del texto*/
+    font-weight: 400;
+}
+
+.container{ /*esto hace q el titulo de la tienda y el carrito no se vayan al otro laco de la pantalla*/
+    max-width: 114rem;
+    margin: 0 auto;
+    padding: 0 1.6rem;
+}
+@media only screen and (max-width: 1200px){
+    .container{
+        padding: 0 3rem;
+    }
+}
+@media only screen and (max-width: 768px){
+    .container{
+        padding: 0 5rem;
+    }
+} /* los dos media screen sirve para cuando uno vaya a ver la pagina web en un dispositivo movil*/
+
+/* NAVIGATION */
+.nav{ /*crea el navbar*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem 0;
+    line-height: 1rem;
+    background-color: var(--azul);
+}
+.nav__center{ /*centra los textos q estan dentro del navbar*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.nav__logo{ /*coloca el carrito a la derecha y le da el color blanco*/
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.carrito__icon{
+    position: relative;
+    cursor: pointer;
+}
+.carrito__icon i{ /*define el tamaño del carrito*/
+    margin-top: .6rem;
+    font-size: 3.5rem;
+    color: var(--white);
+}
+.carrito__icon span{ /* le da la forma al circulito rojo y el numero q esta adentro*/
+    position: absolute;
+    top: -.4rem;
+    right: -3.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--rojo);
+    color: var(--white);
+    padding: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+}
+
+/* PRODUCTOS */
+
+.productos__center{ /*sirve para separar las columnas de los paquetes*/
+    padding: 0 3rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem 1rem;
+}
+.producto{ /*le da el borde a los paquetes*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .2);
+}
+.image__container img{ /*establece un tamaño fijo a los paquetes*/
+    width: 310px;
+}
+.productos__footer{
+    padding: 1rem;
+    width: 100%;
+} /*separa la parte del carrito con el de los paquetes*/
+
+.bottom{ /*esto hace q  el boton no quede pegado al contenedor agregando un espacio mas largo*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+.btn{ /*le da el estilo al boton*/
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 1rem 1.8rem;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.7rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+.btn:hover{ /*al pasarle encima del boton cambia de color*/
+    background-color: var(--azul);
+    color: var(--white);
+    border: 1px solid var(--azul);
+}
+
+
+
+/* Carrito */
+.carrito__overlay{ /*al abrir el carrito pone el fondo de un tono medio oscuro*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 300ms ease-in-out;
+    background-color: rgba(0, 0, 0, .7);
+     visibility: hidden;
+    z-index: 2;
+}
+.carrito{ /*ordena los elementos en el contenedor blanco*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.5);
+    width: 60%;
+    height: 80%;
+    padding: 1.6rem;
+    border-radius: 2rem;
+    overflow-x: scroll;
+    background-color: #f2f2f2;
+     opacity: 0; 
+     visibility: hidden; 
+    transform: all 300ms ease-in-out;
+}
+.carrito.show{ /*muestra los elementos que hay en el contenedor blanco*/
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.carrito__overlay.show{ /*cuando le doy click al carrito automatica mente activa el carrito overlay*/
+    visibility: visible;
+}
+.carrito .close__carrito{ /*aumemta el tamaño de la xde cerrar*/
+    font-size: 4.5rem;
+    cursor: pointer;
+    color: var(--black);
+    transform: all 300ms ease-in-out;
+}
+.carrito .close__carrito:hover{ /*le da el color rojo al circulito5 */
+    color: var(--rojo);
+}
+
+
+.carrito__item{ /*centra la lista de paquetes*/
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    width: 70%;
+    margin: 2rem auto;
+}
+.carrito__item img{ /*establece el tamaño de la imagen al darle click al carrito*/
+    width: 9rem;
+}
+
+.carrito__item .price{ /*le da el color azul al precio y establece el tamaño del precio*/
+    color: var(--azul);
+    font-weight: 700;
+}
+.carrito__item .remove__item{ /*agranda el boton de borrar un paquete y le da el color rojo*/
+    cursor: pointer;
+    color: var(--rojo);
+    font-size: 4rem;
+}
+.carrito__footer{ /*centra el boton de remover carrito*/
+    text-align: center;
+    margin: 3rem;
+}
+@media only screen and (max-width: 1350px){ /**/ /*Establece un punto de interrupción de media para pantallas con un ancho máximo de 1350px*/
+    .carrito__item{
+        width: 100%; /*Establece el ancho del elemento con clase "carrito__item" al 100%*/
+    }
+}
+@media only screen and (max-width: 700px){ /*Establece un punto de interrupción de media para pantallas con un ancho máximo de 700px*/
+    .carrito{
+        width: 100%; /*Establece el ancho del elemento con clase "carrito" al 100%*/
+        height: 100%; /*Establece la altura del elemento con clase "carrito" al 100%*/
+        border-radius: 0rem; /*Establece el radio de borde del elemento con clase "carrito" a 0*/
+    }
+    .carrito__item h3{
+        font-size: 1.6rem; /*Establece el tamaño de fuente del encabezado h3 del elemento con clase "carrito__item" a 1.6rem*/
+        margin-bottom: 1rem; /*Establece el margen inferior del encabezado h3 del elemento con clase "carrito__item" a 1rem*/
+    }
+    .btn{
+        padding: .8rem 1.5rem; /*Establece el relleno del botón con clase "btn" a .8rem arriba y abajo y 1.5rem izquierda y derecha*/
+        font-size: 1.6rem; /*Establece el tamaño de fuente del botón con clase "btn" a 1.6rem*/
+    }
+}
+
+/*Filter*/ /*Estilos para el filtro*/
+.filter{
+    padding: 0 2rem; /*Establece el relleno del elemento con clase "filter" a 0 arriba y abajo y 2rem izquierda y derecha*/
+    width: 100%; /*Establece el ancho del elemento con clase "filter" al 100%*/
+    margin: 12rem auto 0 auto; /*Establece el margen superior del elemento con clase "filter" a 12rem*/
+}
+.filter .grid{
+    display: grid; /*Establece la visualización del elemento con clase "grid" como cuadrícula*/
+    grid-template-columns: 1fr; /*Establece una columna en la cuadrícula del elemento con clase "grid" con un ancho fraccionado*/
+    grid-row-gap: 30px; /*Establece el espacio entre filas de la cuadrícula del elemento con clase "grid" a 30px*/
+}
+.filter label{
+    font-size: 2.3rem; /*Establece el tamaño de fuente de las etiquetas del filtro a 2.3rem*/
+    outline: 0; /*Establece el contorno del elemento a 0*/
+    color: #7e7a7a; /*Establece el color del texto de las etiquetas del filtro a #7e7a7a*/
+}
+.filter input{
+    border: none;              /* Elimina el borde del input */
+    width: 80%;                /* Establece el ancho del input al 80% del contenedor */
+    height: 30px;              /* Establece la altura del input a 30 píxeles */
+    outline: 0;                /* Elimina el contorno del input al hacer clic en él */
+    padding: 0 1rem;           /* Establece el relleno interno del input */
+    font-size: 1.6rem;         /* Establece el tamaño de fuente del input */
+    font-weight: 500;          /* Establece el grosor de la fuente del input */
+    color: #7e7a7a;            /* Establece el color del texto del input */
+}
+
+.filter .div{
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .2);   /* Establece la sombra de la caja */
+    height: 40px;              /* Establece la altura de la caja a 40 píxeles */
+    padding: .5rem 2rem;       /* Establece el relleno interno de la caja */
+}
+
+.filter .category{
+    box-shadow: 0 2px 5px 0px rgba(0, 0, 0, .2);   /* Establece la sombra de la caja */
+    display: flex;             /* Establece la caja como elemento flexible */
+    padding: 0 1rem;           /* Establece el relleno interno de la caja */
+    height: 40px;              /* Establece la altura de la caja a 40 píxeles */
+}
+
+.filter .category select{
+    border: 0;                 /* Elimina el borde del select */
+    outline: 0;                /* Elimina el contorno del select al hacer clic en él */
+    width: 100%;               /* Establece el ancho del select al 100% del contenedor */
+    font-size: 1.6rem;         /* Establece el tamaño de fuente del select */
+    color: #5a5858;            /* Establece el color del texto del select */
+}
+
+@media (min-width: 768px){
+    .filter .grid{
+        grid-template-columns: 480px 200px;   /* Establece la cantidad de columnas de la cuadrícula */
+        justify-content: space-between;       /* Establece el espacio entre los elementos de la cuadrícula */
+        max-width: 1092px;                    /* Establece la anchura máxima de la cuadrícula */
+        margin: auto;                         /* Centra la cuadrícula horizontalmente */
+    }
+}
+
+/* Detalles */
+
+.detalles{
+    height: 100vh;              /* Establece la altura de la sección a 100% de la altura de la ventana */
+    display: flex;              /* Establece la sección como elemento flexible */
+    justify-content: center;    /* Centra el contenido horizontalmente dentro de la sección */
+    padding-top: 15rem;         /* Establece el relleno superior de la sección */
+}
+.detalle-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+}
+.detalles .img-fluid{
+    max-width: 380px;
+    width: 100%;
+    margin: 5rem auto;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, .2);
+} 
+.detalles-content{
+    padding: 2rem;
+}
+.detalles-content h3{
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.detalles-content .precio span{
+    color: var(--azul);
+    font-size: 2rem;
+    font-weight: 600;
+}
+.detalles-content .description{
+    padding-top: 2rem;
+}
+.detalles-content .description span{
+    line-height: 2.8rem;
+}
+@media only screen and (max-width: 840px){
+    .detalle-grid{
+        grid-template-columns: 1fr;
+    }
+}

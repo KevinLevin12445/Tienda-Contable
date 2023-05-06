@@ -1,0 +1,23 @@
+{
+    "status": "success",
+    "items": [{
+            "id": 1,
+            "title": "Contabilidad Mensual para Empresas",
+            "price":  6009,
+            "image": "https://cdn.shopify.com/s/files/1/0549/3217/7072/products/contabilidad-persona-moral_large.jpg?v=1622761732"
+        },
+        {
+            "id": 2,
+            "title": "Contabilidad Mensual para Personas Físicas con Actividad Empresarial",
+            "price": 4013,
+            "image": "https://cdn.shopify.com/s/files/1/0549/3217/7072/products/contabilidad-PF-otros-actividad-empresarial_large.jpg?v=1622761869"
+        },
+        {
+            "id": 3,
+            "title": "Contabilidad Mensual para Hosts Airbnb",
+            "price": 1560,
+            "image": "https://cdn.shopify.com/s/files/1/0549/3217/7072/products/Contabilidad-Host-Airbnb_large.jpg?v=1621379474"
+        }
+    
+    ]
+}

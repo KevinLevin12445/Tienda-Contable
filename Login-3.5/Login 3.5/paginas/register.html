@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto final bit</title>
+
+    <link rel="stylesheet" href="../styles/styleRegister.css"> <!--enlaza es css--->
+    <script src="../sources/register.js"></script> <!--enlaza el codigo javascript--->
+</head>
+
+
+<body>
+    
+    <style>
+        body {
+           background-color: #245286; /*coloca de fondo un color gris claro*/
+        }
+     </style>
+
+
+
+
+
+<form action="" method=""> <!--Formulario para enviar información-->
+  <div class="login-container"> <!--Contenedor para el formulario de registro-->
+  <h1>Registrate</h1>   <!--Encabezado para el título-->
+  <div class="input-container"> <!--Contenedor para los campos de entrada-->
+    <form> <!--Formulario para recopilar información del usuario-->
+      <label for="username">Usuario:</label> <!--Etiqueta para el campo de entrada de nombre de usuario-->
+      <input type="text" id="username" name="username" placeholder="Introduce tu usuario" required > <!--Campo de entrada de nombre de usuario-->
+      <br>
+      <label for="password">Contraseña:</label> <!--Etiqueta para el campo de entrada de contraseña-->
+      <input type="password" id="password" name="password" placeholder="Introduce tu contraseña" required> <!--Campo de entrada de contraseña-->
+      <br>
+      <label for="confirm_password">Confirmar Contraseña:</label> <!--Etiqueta para el campo de confirmación de contraseña-->
+      <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirma tu contraseña" required> <!--Campo de confirmación de contraseña-->
+      <br>
+      <button type="button" onclick="guardarDatos()" class="fcc-btn" >Registrarse</button> <!--Botón para enviar el formulario-->
+    </form>
+    </div>
+    <p class="login-link">¿Tienes una cuenta? <a href="../paginas/login.html">Inicia sesión</a></p> <!--Texto adicional para el enlace de inicio de sesión-->
+
+  </div>
+
+
+</form>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Define el modelo de caja de todos los elementos como border-box */
+
+  *{
+  box-sizing: border-box;
+  }
+  /* Define el fondo y la fuente para el cuerpo del documento */
+  body {
+  background-color: #f2f2f2;
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  /* Estilo para el contenedor del formulario de inicio de sesión */
+  .login-container {
+  width: 400px;
+  margin: 80px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  /* Estilo para el título "Regístrate" */
+  h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #02356e;
+  }
+  
+  /* Estilo para el formulario */
+  form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  
+  /* Estilo para el contenedor de entrada */
+  .input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  }
+  
+  /* Estilo para las etiquetas de entrada */
+  label {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #dfdfdf;
+  color: #333333;
+  margin-top: 5px;
+  box-shadow: 0 1px 5px rgba(0, 166, 231, 0.1);
+  }
+  
+  /* Estilo para las entradas de texto y contraseña cuando están enfocadas */
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilo para el botón de registro */
+  .fcc-btn {
+  background-color: #162557;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  }
+  
+  /* Estilo para el botón de registro cuando se desplaza sobre él */
+  .fcc-btn:hover {
+  background-color: #283f8b;
+  }
+  
+  /* Estilo para el enlace "¿Tienes una cuenta? Inicia sesión" */
+ .login-link a {
+  color: #00087c;
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  }
+  
+  /* Estilo para el enlace "¿Tienes una cuenta? Inicia sesión" cuando se desplaza sobre él */
+  .login-link a:hover {
+  text-decoration: none;
+  color: #3b5cc9;
+  }
+  
+  
+  
+  
