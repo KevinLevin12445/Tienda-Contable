@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Página de Pago Ficticia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .alert {
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #f44336;
+      color: #fff;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Página de Pago Ficticia</h1>
+
+    <div>
+      <label for="cardNumber">Número de Tarjeta:</label>
+      <input type="text" id="cardNumber">
+
+      <label for="cardName">Nombre:</label>
+      <input type="text" id="cardName">
+
+      <label for="cvv">CVV:</label>
+      <input type="number" id="cvv" min="100" max="999">
+
+      <label for="expiryDate">Fecha de Vencimiento:</label>
+      <input type="date" id="expiryDate">
+
+      <button onclick="processPayment()">Pagar</button>
+    </div>
+
+    <div id="alert" class="alert" style="display: none;"></div>
+
+    <script>
+      function processPayment() {
+        var cardNumber = document.getElementById("cardNumber").value;
+        var cardName = document.getElementById("cardName").value;
+        var cvv = document.getElementById("cvv").value;
+        var expiryDate = document.getElementById("expiryDate").value;
+
+        var validCards = ["1111111111111111", "2222222222222222", "3333333333333333", "4444444444444444", "5555555555555555"];
+        var alertElement = document.getElementById("alert");
+
+        if (validCards.includes(cardNumber)) {
+          alertElement.style.display = "none";
+          alert("Pago exitoso");
+        } else {
+          alertElement.style.display = "block";
+          alertElement.textContent = "Tarjeta falsa";
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

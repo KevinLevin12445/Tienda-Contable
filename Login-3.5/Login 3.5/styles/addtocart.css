@@ -39,6 +39,9 @@ body{
 .fa-solid{
     color: #585858;
 }
+.fa-shopping-cart{
+   color:#585858;
+}
 .cart p{
     height: 22px;
     width: 22px;
@@ -163,6 +166,6 @@ button:hover{
     color: #333;
 }
 
-.fa-comment-dots:hover {
+.fa-shopping-cart:hover {
     color: #333;
 }
